@@ -1,0 +1,46 @@
+/* Features */
+.feature {
+    padding-bottom: 94px;
+    padding-top: 94px;
+
+    &__list {
+    display: flex;
+
+    li+li {
+    margin-left: 30px;
+    }
+
+    .feature__title {
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    }
+
+    .feature__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    }
+    }
+
+    &__card {
+    width: 270px;
+    height: auto;
+}
+
+    &__icon {
+    display: flex;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+
+    background: #F5F4FA;
+    border-radius: 4px;
+}
+}

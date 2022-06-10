@@ -1,0 +1,143 @@
+/* Page header */
+.page-header {
+    border-bottom: 1px solid #ECECEC;
+
+    .logo-left {
+    color: #2196F3;
+    text-decoration: none;
+    @include fonts(Raleway, 700, 26px, 1.19, 0.03em, null);
+    }
+
+    .logo-right {
+    color: #000000;
+    @include fonts(Raleway, 700, 26px, 1.19, 0.03em, null);
+    }
+}
+
+/* Navigation */
+
+.nav {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+
+    @include fonts(null, 500, 14px, 1.14, null, null);
+
+    .item+.item {
+    margin-left: 50px;
+    }
+
+    .link {
+    color: var(--title-text-color);
+    }
+
+    .link.current {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+}
+
+.item .nav:hover,
+.item .nav:focus {
+    color: var(--accent-color);
+}
+
+.nav.current::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: -1px;
+    left: 0%;
+    width: 100%;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
+    opacity: 1;
+
+}
+
+.nav:hover::after,
+.nav:focus::after {
+    opacity: 1;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Contacts */
+.contacts-list {
+    display: flex;
+    margin-left: auto;
+
+    li+li {
+    margin-left: 30px;
+    }
+    
+
+}
+
+.contacts {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contacts-list .link {
+    color: var(--primary-text-color);
+
+    @include fonts(null, 500, 14px, 1.14, null, null);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+    }
+}
+
+.tel,
+.mail {
+    display: flex;
+    align-items: center;
+    color: var(--primary-text-color);
+}
+
+.header-icon {
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+    }
+}

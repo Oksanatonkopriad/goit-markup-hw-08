@@ -1,0 +1,101 @@
+/* Team */
+.section-team {
+    padding-bottom: 94px;
+    padding-top: 94px;
+    background-color: #F5F4FA;
+
+.team-card {
+    background: #FFFFFF;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+.text {
+        margin-bottom: 16px;
+        color: var(--primary-text-color);
+        font-size: 16px;
+        line-height: 1.18;
+
+        text-align: center;
+    }
+}
+
+.section-title {
+        margin-bottom: 50px;
+        color: var(--title-text-color);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+}
+}
+
+.team-list {
+    display: flex;
+
+    li+li {
+    margin-left: 30px;
+    }
+
+.title {
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+}
+
+.team-content {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.item-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-icon {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:last-child {
+    margin-right: 0px;
+ }
+
+&:hover,
+&:focus {
+    background-color: #2196F3;
+
+.icon-team {
+    fill: #FFFFFF;
+}
+}
+}
+
+.icon-team {
+    height: 20px;
+    fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}

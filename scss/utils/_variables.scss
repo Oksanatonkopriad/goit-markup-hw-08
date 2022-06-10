@@ -1,0 +1,28 @@
+@mixin fonts($ff, $fw, $fz, $lh, $ls, $tt) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    letter-spacing: $ls;
+    text-transform: $tt;
+}
+// background color
+$main-backround-color: #fff;
+$secondary-backround-color: #f5f4fa;
+$footer-backround-color: #2f303a;
+$hover-backgraound-color: #2196F3;
+
+
+// color
+$link-color: var(--title-text-color);
+$current-link: var(--accent-color);
+$text-color: var(--primary-text-color);
+$title-color: var(--title-text-color);
+
+// accent
+$accent-color: #2196f3;
+
+// fonts
+$main-font-family: 'Roboto', sans-serif;
+$logo-font-family: 'Raleway', sans-serif;
+
