@@ -1,36 +1,78 @@
 /* Features */
 .feature {
-    padding-bottom: 94px;
-    padding-top: 94px;
+    padding-bottom: 60px;
+    padding-top: 60px;
 
-    &__list {
-    display: flex;
-
-    li+li {
-    margin-left: 30px;
+    @include mq(tablet) {
+    padding-bottom: 60px;
+    padding-top: 60px;
     }
 
-    .feature__title {
+    @include mq(desktop) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+    }
+
+    &__list {
+    @include mq(tablet) {
+    display: flex;    
+    }
+    @include mq(tablet-only){
+    flex-wrap: wrap;
+    }
+    }
+
+    &__title {
     margin-bottom: 10px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @include mq(mobile-only) {
+    text-align: center;
+    }
     }
 
-    .feature__text {
+    &__text {
     font-size: 14px;
-    line-height: 1.71;
+    line-height: 24px;
     letter-spacing: 0.03em;
-    }
     }
 
     &__card {
+    @include mq(mobile-only) {
+    width: 450px;
+    height: 226px;
+    }    
+
+    @include mq(mobile-only) {
+    &:not(:last-child) {
+    margin-bottom: 30px;
+    }
+    }
+
+    @include mq(tablet-only){
+        width: 354px;
+        height: 226px;
+    &:nth-child(2n + 1) {
+        margin-right: 30px;
+        }
+    &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+        }
+    }
+
+    @include mq(desktop) {
     width: 270px;
-    height: auto;
-}
+    height: 251px;   
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+    }
+    }
 
     &__icon {
     display: flex;
