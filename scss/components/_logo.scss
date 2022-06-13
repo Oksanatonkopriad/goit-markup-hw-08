@@ -28,5 +28,13 @@
 }
 
 .logo-address {
+    @include mq(tablet-only) {
+        margin-left: 76px;
+    }
+
+    @include mq(desktop) {
     margin-right: 70px;
+    }
+    
+
 }

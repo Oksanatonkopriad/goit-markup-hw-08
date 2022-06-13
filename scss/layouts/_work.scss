@@ -1,6 +1,14 @@
 /* Our work */
 .work {
-    padding-bottom: 94px;
+padding-bottom: 94px;
+
+@include mq(mobile-only) {
+    display: none;
+}
+
+@include mq(tablet-only) {
+    display: none;
+}
 
  &__list {
         display: flex;
