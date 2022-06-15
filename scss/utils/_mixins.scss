@@ -38,6 +38,12 @@
       @content;
     }
   }
+
+  @if $type == 'retina' {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      @content;
+    }
+  }
 }
 
 @mixin fonts($ff, $fw, $fz, $lh, $ls, $tt) {
@@ -47,10 +53,4 @@
   line-height: $lh;
   letter-spacing: $ls;
   text-transform: $tt;
-}
-
-@if $type == 'retina' {
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    @content;
-  }
 }
