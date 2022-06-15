@@ -1,50 +1,66 @@
 /* Order service */
 .order-service {
-    height: 400px;
-    padding-bottom: 118px;
-    padding-top: 118px;
-    margin-left: auto;
-    margin-right: auto;
+  min-width: 480px;
+  height: 400px;
+  padding-bottom: 118px;
+  padding-top: 118px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/order-service/Header\ img.jpg);
-    background-color: #C4C4C4;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/order-service/Header-img.jpg);
 
-    text-align: center;
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-    @include mq(mobile-only) {
-    max-width: 480px;
+  @include mq(retina) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/order-service/Header-img@2x.jpg);
+  }
+
+  @include mq(tablet-only) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/order-service/Header-tb-img.jpg);
+    min-width: 768px;
+
+    @include mq(retina) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/order-service/Header-tb-img@2x.jpg);
     }
-   
-    @include mq(tablet-only) {
-    // background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bg.tb-order-service/Header\ img.jpg);
-    max-width: 768px;
-    }
+  }
 
-    @include mq(desktop) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/order-service/Img.jpg);
+  @include mq(desktop) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/order-service/Img.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/order-service/Img-dst-@2x.jpg);
+    }
+    min-width: 1200px;
     height: 600px;
     padding-bottom: 200px;
     padding-top: 200px;
+  }
+
+  & .title {
+    margin-bottom: 30px;
+    margin-top: 0;
+    color: var(--primary-bg-color);
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include mq(desktop) {
+      font-size: 44px;
+      line-height: 60px;
     }
-
-    & .title {
-            margin-bottom: 30px;
-            margin-top: 0;
-            color: var(--primary-bg-color);
-
-            font-weight: 900;
-            font-size: 26px;
-            line-height: 42px;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            text-align: center;
-
-            @include mq(desktop) {
-            font-size: 44px;
-            line-height: 60px;
-            }
-        }
+  }
 }
