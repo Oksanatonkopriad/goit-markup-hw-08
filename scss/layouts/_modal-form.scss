@@ -1,6 +1,7 @@
 /* Backdrop */
 
 .backdrop {
+    z-index: 1000;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -16,18 +17,18 @@
         pointer-events: none;
         visibility: hidden;
 
-    .form {
-        transform: translate(-50%, -50%) scale(0, 5);
-        opacity: 0;
-    }
+        .form {
+            transform: translate(-50%, -50%) scale(0, 5);
+            opacity: 0;
+        }
     }
 }
 
 .form {
     position: absolute;
     padding: 40px;
-    width: 528px;
-    height: 581px;
+    width: calc(100vw - 30px);
+    height: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -38,7 +39,15 @@
     opacity: 1;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&-title {
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+    }
+
+    &-title {
         display: block;
         font-style: normal;
         font-weight: 700;
@@ -49,95 +58,100 @@
         margin-bottom: 12px;
 
         color: #212121;
-}
-
-&-group {
-    display: block;
-    margin-bottom: 10px;
-
-    &:last-child {
-        margin-bottom: 0px;
-    }
-}
-
-&-comment {
-    display: block;
-    margin-bottom: 20px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-
-    letter-spacing: 0.01em;
-    color: #757575;
-}
-
-&-policy-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-
-    letter-spacing: 0.03em;
-    color: #757575;
-}
-
-&-label {
-    display: block;
-    margin-bottom: 4px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-
-    letter-spacing: 0.01em;
-    color: #757575;
-}
-
-&-icon {
-    position: absolute;
-    top: 11px;
-    left: 12px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-&-input {
-    display: flex;
-    width: 100%;
-    height: 40px;
-    padding: 12px 16px;
-    padding-left: 42px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-        border-color: var(--accent-color);
     }
 
-    &-container {
-        position: relative;
+    &-group {
+        display: block;
+        margin-bottom: 10px;
 
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &-comment {
+        display: block;
+        margin-bottom: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+
+        letter-spacing: 0.01em;
+        color: #757575;
+    }
+
+    &-policy-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+
+        letter-spacing: 0.03em;
+        color: #757575;
+    }
+
+    &-label {
+        display: block;
+        margin-bottom: 4px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+
+        letter-spacing: 0.01em;
+        color: #757575;
+    }
+
+    &-icon {
+        position: absolute;
+        top: 11px;
+        left: 12px;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &-input {
+        display: flex;
+        width: 100%;
+        height: 40px;
+        padding: 12px 16px;
+        padding-left: 42px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: transparent;
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        &:focus-within {
-            .form-input {
-                border-color: var(--accent-color);
-            }
+        &:hover,
+        &:focus {
+            border-color: var(--accent-color);
+        }
 
-            .form-icon {
-                fill: var(--accent-color);
+        &-container {
+            position: relative;
+
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:focus-within {
+                .form-input {
+                    border-color: var(--accent-color);
+                }
+
+                .form-icon {
+                    fill: var(--accent-color);
+                }
             }
         }
     }
 }
+
+.modal-form {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .icon-close {
@@ -161,10 +175,10 @@
     border-radius: 50%;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&:hover,
-&:focus {
-    fill: var(--accent-color);
-}
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
 }
 
 .comment {
@@ -177,17 +191,17 @@
     padding: 16px 12px;
     transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&:placeholder-shown {
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
+    &:placeholder-shown {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
 
-&:focus,
-&:hover {
-    outline: 1px solid var(--accent-color);
-}
+    &:focus,
+    &:hover {
+        outline: 1px solid var(--accent-color);
+    }
 }
 
 .checkbox {
@@ -201,48 +215,48 @@
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&-icon {
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &-icon {
+        opacity: 0;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
-}
+    }
 
-&-label {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-
-    color: #757575;
-
-    &-link {
+    &-label {
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
-
         letter-spacing: 0.03em;
-        text-decoration-line: underline;
 
-        color: #2196F3;
+        color: #757575;
+
+        &-link {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+
+            letter-spacing: 0.03em;
+            text-decoration-line: underline;
+
+            color: #2196F3;
+        }
     }
-}
 }
 
 .custom-checkbox {
     appearance: none;
 
-&:checked+.checkbox {
-    background-color: #2196F3;
-    border-color: #2196F3;
+    &:checked+.checkbox {
+        background-color: #2196F3;
+        border-color: #2196F3;
 
-& .checkbox-icon {
-    opacity: 1;
-    fill: #FFFFFF;
-}
-}
+        & .checkbox-icon {
+            opacity: 1;
+            fill: #FFFFFF;
+        }
+    }
 
 }
 
