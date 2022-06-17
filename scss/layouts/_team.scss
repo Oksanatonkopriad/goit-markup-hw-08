@@ -1,6 +1,6 @@
 /* Team */
 .section-team {
-  min-width: 480px;
+  width: 100%;
   padding-bottom: 60px;
   padding-top: 60px;
   background-color: #f5f4fa;
@@ -30,10 +30,10 @@
     @include mq(tablet) {
       display: flex;
       flex-wrap: wrap;
+      margin: -15px;
     }
 
     .team-card {
-      min-width: 480px;
       background: #ffffff;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);

@@ -67,18 +67,32 @@
         <div class="container">
             <div class="filter">
                 <ul class="filter-list">
-                    <li> <button class="btn-all" type="button">Все</button></li>
-                    <li> <button class="btn" type="button">Веб-сайты</button></li>
-                    <li> <button class="btn" type="button">Приложения</button></li>
-                    <li> <button class="btn" type="button">Дизайн</button></li>
-                    <li> <button class="btn" type="button">Маркетинг</button></li>
+                    <li class="filter-link"> <button class="btn-all" type="button">Все</button></li>
+                    <li class="filter-link"> <button class="btn" type="button">Веб-сайты</button></li>
+                    <li class="filter-link"> <button class="btn" type="button">Приложения</button></li>
+                    <li class="filter-link"> <button class="btn" type="button">Дизайн</button></li>
+                    <li class="filter-link"> <button class="btn" type="button">Маркетинг</button></li>
                 </ul>
             </div>
 
             <ul class="project">
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img.jpg" alt="Веб-сайт">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(1).jpg    1x,
+                            ./images\portfolio.img\img(1)@2x.jpg 2x
+                                " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(1)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(1)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(1)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(1)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(1)_mb.jpg" alt="Веб-сайт" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
                             <p class="overlay-text">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
@@ -87,7 +101,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="content">
+                    <div class="content first-card">
                         <h2 class="title">Технокряк</h2>
                         <p class="text">Веб-сайт</p>
                     </div>
@@ -95,7 +109,21 @@
                 </li>
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img(1).jpg" alt="Дизайн">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(2).jpg    1x,
+                            ./images\portfolio.img\img(2)@2x.jpg 2x
+                            " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(2)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(2)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(2)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(2)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(2)_mb.jpg" alt="Дизайн" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
                             <p class="overlay-text">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
@@ -112,7 +140,21 @@
                 </li>
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img(2).jpg" alt="Приложение">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(3).jpg    1x,
+                            ./images\portfolio.img\img(3)@2x.jpg 2x
+                            " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(3)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(3)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(3)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(3)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(3)_mb.jpg" alt="Приложение" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
 
                             <p class="overlay-text">
@@ -130,7 +172,21 @@
                 </li>
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img(3).jpg" alt="Маркетинг">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(4).jpg    1x,
+                            ./images\portfolio.img\img(4)@2x.jpg 2x
+                            " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(4)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(4)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(4)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(4)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(4)_mb.jpg" alt="Маркетинг" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
 
                             <p class="overlay-text">
@@ -148,7 +204,21 @@
                 </li>
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img(4).jpg" alt="Приложение">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(5).jpg    1x,
+                            ./images\portfolio.img\img(5)@2x.jpg 2x
+                            " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(5)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(5)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(5)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(5)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(5)_mb.jpg" alt="Приложение" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
 
                             <p class="overlay-text">
@@ -166,7 +236,21 @@
                 </li>
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img(5).jpg" alt="Веб-сайт">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(6).jpg    1x,
+                            ./images\portfolio.img\img(6)@2x.jpg 2x
+                            " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(6)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(6)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(6)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(6)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(6)_mb.jpg" alt="Веб-сайт" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
 
                             <p class="overlay-text">
@@ -184,7 +268,21 @@
                 </li>
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img(6).jpg" alt="Дизайн">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(7).jpg    1x,
+                            ./images\portfolio.img\img(7)@2x.jpg 2x
+                            " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(7)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(7)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(7)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(7)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(7)_mb.jpg" alt="Дизайн" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
 
                             <p class="overlay-text">
@@ -202,7 +300,21 @@
                 </li>
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img(7).jpg" alt="Маркетинг">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(8).jpg    1x,
+                            ./images\portfolio.img\img(8)@2x.jpg 2x
+                            " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(8)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(8)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(8)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(8)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(8)_mb.jpg" alt="Маркетинг" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
 
                             <p class="overlay-text">
@@ -220,7 +332,21 @@
                 </li>
                 <li class="container-project">
                     <div class="thumb">
-                        <img src="./images/portfolio.img/img(8).jpg" alt="Приложение">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="
+                            ./images\portfolio.img\img(9).jpg    1x,
+                            ./images\portfolio.img\img(9)@2x.jpg 2x
+                            " type="image/jpg" />
+                            <source media="(min-width:768px)" srcset="
+                            ./images\portfolio.img\img(9)_tb.jpg 1x, 
+                            ./images\portfolio.img\img(9)_tb@2x.jpg 2x" type="image/jpg" />
+                            <source media="(max-width:767px)" srcset="
+                            ./images\portfolio.img\img(9)_mb.jpg 1x, 
+                            ./images\portfolio.img\img(9)_mb@2x.jpg 2x" type="image/jpg" />
+                            <img class="work-img img" src="
+                            ./images\portfolio.img\img(9)_mb.jpg" alt="Приложение" width="450" height="294"
+                                loading="lazy" />
+                        </picture>
                         <div class="overlay">
 
                             <p class="overlay-text">
@@ -242,7 +368,7 @@
 
     <!--Подвал-->
 
-    <!-- <footer class="page-footer">
+    <footer class="page-footer">
         <div class="container footer">
             <div class="logo-social">
                 <div class="logo-address">
@@ -311,7 +437,7 @@
 
             </div>
         </div>
-    </footer> -->
+    </footer>
 
 </body>
 

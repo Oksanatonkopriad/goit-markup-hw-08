@@ -842,7 +842,7 @@ p {
 
 /* Team */
 .section-team {
-  min-width: 480px;
+  width: 100%;
   padding-bottom: 60px;
   padding-top: 60px;
   background-color: #f5f4fa;
@@ -880,11 +880,11 @@ p {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
 .section-team .team-list .team-card {
-  min-width: 480px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1115,9 +1115,28 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .clients__item {
+    width: 210px;
+    margin-right: 0;
+  }
+  .clients__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
+  .clients__item {
+    width: 210px;
+  }
   .clients__item:not(:nth-child(2n)) {
     margin-right: 30px;
   }
@@ -1128,6 +1147,7 @@ p {
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .clients__item {
+    width: 226px;
     margin-bottom: 30px;
   }
   .clients__item:not(:nth-child(3n)) {
@@ -1136,6 +1156,10 @@ p {
 }
 
 @media screen and (min-width: 1200px) {
+  .clients__item {
+    -ms-flex-preferred-size: 170px;
+        flex-basis: 170px;
+  }
   .clients__item:not(:last-child) {
     margin-right: 30px;
   }
@@ -1699,25 +1723,55 @@ p {
 
 /* Portfolio */
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filter-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .filter-list li + li {
   margin-left: 8px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .filter-link:not(:nth-child(n+4)) {
+    margin-bottom: 15px;
+  }
 }
 
 .btn {
@@ -1730,6 +1784,8 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
+  border: none;
+  border-radius: 4px;
   text-align: center;
   letter-spacing: 0.03em;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1753,6 +1809,8 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
+  border: none;
+  border-radius: 4px;
   text-align: center;
   letter-spacing: 0.03em;
   color: #FFFFFF;
@@ -1777,19 +1835,9 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
-}
-
-.project > .container-project {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
 }
 
 .container-project {
-  width: 370px;
-  margin-right: 30px;
-  margin-bottom: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #FFFFFF;
@@ -1800,6 +1848,52 @@ p {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-project:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .container-project {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .container-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 354px;
+  }
+  .container-project:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 370px;
+  }
+  .container-project:nth-child(3n) {
+    margin-right: 0;
+  }
+  .container-project:nth-child(n + 7) {
+    margin-bottom: 0;
+  }
 }
 
 .container-project:hover, .container-project:focus {
@@ -1848,7 +1942,24 @@ p {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 63px 24px;
+}
+
+@media screen and (min-width: 480px) {
+  .overlay {
+    padding: 77px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .overlay {
+    padding: 49px 24px 77px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    padding: 63px 24px;
+  }
 }
 
 .overlay-text {
@@ -1863,7 +1974,22 @@ p {
 }
 
 .content {
+  width: 100%;
   padding: 20px 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .first-card {
+    padding-bottom: 56px;
+  }
 }
 
 .menu-container {
