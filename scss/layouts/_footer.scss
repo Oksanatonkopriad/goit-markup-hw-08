@@ -7,153 +7,157 @@
 }
 
 .footer {
-    width: 100%;
+
     @include mq(mobile-only) {
-    text-align: center;
-    justify-content: center;
+        text-align: center;
+        justify-content: center;
     }
 
     @include mq(tablet-only) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
     }
 
     @include mq(desktop) {
-    display: flex;
-    align-items: baseline;
+        display: flex;
+        align-items: baseline;
     }
 
 
-&-list {
-li+li {
-margin-top: 8px;
+    &-list {
+        li+li {
+            margin-top: 8px;
 
-@include mq(desktop) {
-    margin-top: 9px;
-}
-}
+            @include mq(desktop) {
+                margin-top: 9px;
+            }
+        }
 
-.link-address {
-font-family: 'Roboto';
-font-style: normal;
-color: var(--primary-bg-color);
-text-decoration: none;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        .link-address {
+            font-family: 'Roboto';
+            font-style: normal;
+            color: var(--primary-bg-color);
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.03em;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&:hover,
-&:focus {
-color: var(--accent-color);
-}
-}
+            &:hover,
+            &:focus {
+                color: var(--accent-color);
+            }
+        }
 
-.link {
-font-family: 'Roboto';
-font-style: normal;
-color: rgba(255, 255, 255, 0.6);
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        .link {
+            font-family: 'Roboto';
+            font-style: normal;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.03em;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&:hover,
-&:focus {
-color: var(--accent-color);
-}
-}
-}
-
-.social {
-@include mq(mobile-only) {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-@include mq(tablet-only) {
-    margin-right: 89px;
-}
-
-@include mq(desktop) {
-    margin-right: auto;
-}
-}
-
-&-icon {
-    height: 20px;
-    fill: #FFFFFF;
-}
-
-&-form {
-    display: flex;
-    @include mq(not-desktop) {
-    flex-direction: column;
+            &:hover,
+            &:focus {
+                color: var(--accent-color);
+            }
+        }
     }
 
+    .social {
+        @include mq(mobile-only) {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
 
-}
+        @include mq(tablet-only) {
+            margin-right: 89px;
+        }
 
-&-btn {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-&-input {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-
-    display: flex;
-    align-items: center;
-    @include mq(desktop) {
-    max-width: 358px;
-    margin-right: 12px;
-    }
-    margin-left: auto;
-    margin-right: auto;
-
-    @include mq(not-desktop) {
-        margin-bottom: 20px;
+        @include mq(desktop) {
+            margin-right: auto;
+        }
     }
 
-    color: rgba(255, 255, 255, 0.6);
-    width: 450px;
-    height: 50px;
-
-    @include mq(mobile-only) {
-    width: 100%;
-    max-width: 450px;
+    &-icon {
+        height: 20px;
+        fill: #FFFFFF;
     }
 
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    padding-left: 16px;
-    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &-form {
+        display: flex;
 
-    &:hover,
-    &:focus {
-        outline: 0;
-        border-color: #fff;
+        @include mq(not-desktop) {
+            flex-direction: column;
+        }
+
+
     }
-}
+
+    &-btn {
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    &-input {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+
+        display: flex;
+        align-items: center;
+
+        @include mq(desktop) {
+            max-width: 358px;
+            margin-right: 12px;
+        }
+
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq(not-desktop) {
+            margin-bottom: 20px;
+        }
+
+        color: rgba(255, 255, 255, 0.6);
+        width: 450px;
+        height: 50px;
+
+        @include mq(mobile-only) {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        padding-left: 16px;
+        transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            outline: 0;
+            border-color: #fff;
+        }
+    }
 }
 
 .email-form {
     @include mq(desktop) {
-    margin-left: auto;
+        margin-left: auto;
     }
 
 
