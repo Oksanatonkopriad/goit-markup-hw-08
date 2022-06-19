@@ -1,6 +1,6 @@
 /* Order service */
 .order-service {
-  min-width: 480px;
+  // min-width: 480px;
   height: 400px;
   padding-bottom: 118px;
   padding-top: 118px;
@@ -24,7 +24,7 @@
   @include mq(tablet-only) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/order-service/Header-tb.jpg);
-    min-width: 768px;
+    // min-width: 768px;
 
     @include mq(retina) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -41,7 +41,7 @@
         url(../images/order-service/Header-dst@2x.jpg);
     }
 
-    min-width: 1200px;
+    // min-width: 1200px;
     height: 600px;
     padding-bottom: 200px;
     padding-top: 200px;
