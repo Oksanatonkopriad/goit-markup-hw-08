@@ -586,7 +586,6 @@ p {
 
 /* Order service */
 .order-service {
-  min-width: 480px;
   height: 400px;
   padding-bottom: 118px;
   padding-top: 118px;
@@ -612,7 +611,6 @@ p {
   .order-service {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/order-service/Header-tb.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/order-service/Header-tb.jpg);
-    min-width: 768px;
   }
 }
 
@@ -627,7 +625,6 @@ p {
   .order-service {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/order-service/Header-dst.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/order-service/Header-dst.jpg);
-    min-width: 1200px;
     height: 600px;
     padding-bottom: 200px;
     padding-top: 200px;
