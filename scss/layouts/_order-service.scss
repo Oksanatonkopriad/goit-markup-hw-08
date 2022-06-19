@@ -7,18 +7,20 @@
   margin-right: auto;
   text-align: center;
 
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(/images/order-service/Header-mb.jpg);
+  @include mq(mobile-only) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/order-service/Header-mb.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/order-service/Header-mb@2x.jpg);
+    }
+  }
 
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  @include mq(retina) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/order-service/Header-mb@2x.jpg);
-  }
 
   @include mq(tablet-only) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
