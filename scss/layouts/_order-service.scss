@@ -18,27 +18,27 @@
 
   @include mq(retina) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/order-service/Header-mb@2x.jpg);
+      url(../images/order-service/Header-mb@2x.jpg);
   }
 
   @include mq(tablet-only) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/order-service/Header-tb.jpg);
+      url(../images/order-service/Header-tb.jpg);
     min-width: 768px;
 
     @include mq(retina) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(/images/order-service/Header-tb@2x.jpg);
+        url(../images/order-service/Header-tb@2x.jpg);
     }
   }
 
   @include mq(desktop) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/order-service/Header-dst.jpg);
+      url(../images/order-service/Header-dst.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(/images/order-service/Header-dst@2x.jpg);
+        url(../images/order-service/Header-dst@2x.jpg);
     }
 
     min-width: 1200px;
