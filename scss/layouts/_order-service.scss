@@ -9,11 +9,11 @@
 
   @include mq(mobile-only) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/order-service/header_mb.jpg);
+      url(../images/order-service/header_mb.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(/images/order-service/header_mb@2x.jpg);
+        url(../images/order-service/header_mb@2x.jpg);
     }
   }
 
@@ -24,21 +24,21 @@
 
   @include mq(tablet-only) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/order-service/header_tb.jpg);
+      url(../images/order-service/header_tb.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(/images/order-service/header_tb@2x.jpg);
+        url(../images/order-service/header_tb@2x.jpg);
     }
   }
 
   @include mq(desktop) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(/images/order-service/header_dst.jpg);
+      url(../images/order-service/header_dst.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(/images/order-service/header_dst@2x.jpg);
+        url(../images/order-service/header_dst@2x.jpg);
     }
 
     height: 600px;
